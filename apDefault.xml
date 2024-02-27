@@ -1,0 +1,69 @@
+<analysis>
+  <!-- analysis steps -->
+  <analysisSteps>
+    <mapIndividualObservations> 1 </mapIndividualObservations>
+    <coaddObservations> 1 </coaddObservations>
+    <fitCoadditionToGaussian> 1 </fitCoadditionToGaussian>
+    <produceNoiseMaps> 1 </produceNoiseMaps>
+    <applyWienerFilter> 1 </applyWienerFilter>
+  </analysisSteps>
+
+  <!-- analysis parameters and switches -->
+  <parameters>
+    <despikeSigma> 10.0000 </despikeSigma>
+    <lowpassFilterKnee> 12.0000 </lowpassFilterKnee>
+    <timeOffset> 0.00000 </timeOffset>
+    <timeChunk> 10.0000 </timeChunk>
+    <cutStd> 0.0000 </cutStd>
+    <neigToCut> 0 </neigToCut>
+    <splineOrder> 4 </splineOrder>
+    <tOrder> 0 </tOrder>
+    <cleanPixelSize> 20.0 </cleanPixelSize>
+    <cleanStripe> 0.85 </cleanStripe>
+    <controlChunk> 0.2 </controlChunk>
+    <resample> 1 </resample>
+    <approximateWeights> 0 </approximateWeights>
+    <masterGridJ2000_0> 0.00000 </masterGridJ2000_0>
+    <masterGridJ2000_1> 0.00000 </masterGridJ2000_1>
+    <pixelSize> 0.750000 </pixelSize>
+    <threadNumber> 1 </threadNumber>
+  </parameters>
+
+  <!-- apply a wiener filter -->
+  <wienerFilter>
+    <gaussianTemplate> 1 </gaussianTemplate>
+    <gaussianTemplateFWHM> 3.88e-5 </gaussianTemplateFWHM>
+    <lowpassOnly> 0 </lowpassOnly>
+    <highpassOnly> 0 </highpassOnly>
+    <normalizeErrors> 0 </normalizeErrors>
+  </wienerFilter>
+
+  <!-- coaddition path and files -->
+  <coaddition>
+    <mapPath>/data/wilson/test/coadded_maps/</mapPath>
+    <mapFile>coadded_test.nc</mapFile>
+  </coaddition>
+
+  <!-- noise realization path and files -->
+  <noiseRealization>
+    <nRealizations>100</nRealizations>
+    <noisePath>/data/wilson/test/noise_maps/</noisePath>
+    <avgNoisePsdFile>average_noise_psd.nc</avgNoisePsdFile>
+    <avgNoiseHistFile>average_noise_histogram.nc</avgNoiseHistFile>
+  </noiseRealization>
+
+  <!-- observation filelist -->
+  <observations>
+    <rawDataPath>/data/wilson/test/raw_data/</rawDataPath>
+    <bsPath>/data/wilson/test/raw_data/</bsPath>
+    <mapPath>/data/wilson/test/reduced_maps/</mapPath>
+    <nFiles> 1</nFiles>
+    <f0>
+      <fileName>aztec_2014-03-28_017941_00_0001.nc</fileName>
+      <bsName>aztec_2014-03-28_017941_00_0001.bstats</bsName>
+      <mapName>aztec_2014-03-28_017941_00_0001_maps.nc</mapName>
+      <bsOffset_0>       0.0000000</bsOffset_0>
+      <bsOffset_1>       0.0000000</bsOffset_1>
+    </f0>
+  </observations>
+</analysis>
